@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xs-12">
+    <p>Add new Servers or blueprints!</p>
+
+    <!--solucao utilizando two way data binding-->
+    <!--=====================================================-->
+    <!--<label>Server Name</label>-->
+    <!--<input type="text" class="form-control" [(ngModel)]="newServerName">-->
+
+    <!--<label>Server Content</label>-->
+    <!--<input type="text" class="form-control" [(ngModel)]="newServerContent">-->
+
+    <!--SOLUCAO UTILIZANDO REFERENCIA LOCAL  SINTAXE :   #NOME_REFERENCIA-->
+    <label>Server Name</label>
+    <input type="text" class="form-control" #nameServer>
+
+    <label>Server Content</label>
+    <input type="text" class="form-control" #contentServer>
+
+    <br>
+
+    <button
+      class="btn btn-primary"
+      (click)="onAddServer( nameServer, contentServer )">Add Server</button>
+
+    <button
+      class="btn btn-primary"
+      (click)="onAddBlueprint( nameServer, contentServer )">Add Server Blueprint</button>
+
+  </div>
+</div>
